@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#FFC400"
+    android:layout_height="match_parent"
+    tools:context=".activities.AddAddressActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/add_address_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#FFEA00"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="?attr/actionBarTheme"
+        app:title="Add Address" />
+
+
+    <TextView
+        android:id="@+id/create_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Address"
+        android:layout_marginTop="30dp"
+        app:layout_constraintHorizontal_bias=".156"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_address_toolbar" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/name_layer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/ic_person"
+        app:startIconTint="@color/black"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="10dp"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/create_address"
+        app:layout_constraintWidth_percent=".8" >
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/address_layer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        app:startIconDrawable="@drawable/ic_location"
+        app:startIconTint="@color/black"
+        android:layout_height="64dp"
+        app:errorEnabled="true"
+        android:layout_marginTop="10dp"
+        android:hint="Address Lane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name_layer"
+        app:layout_constraintWidth_percent=".8" >
+        <EditText
+            android:id="@+id/address_lane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/city_layer"
+        app:startIconDrawable="@drawable/ic_location_city"
+        app:startIconTint="@color/black"
+        app:errorEnabled="true"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="10dp"
+        android:hint="City"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/address_layer"
+        app:layout_constraintWidth_percent=".8">
+
+        <EditText
+            android:id="@+id/city"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/postal_code_layer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/mailbox"
+        app:startIconTint="@color/black"
+        android:layout_height="64dp"
+        android:layout_marginTop="10dp"
+        android:hint="Portal Code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/city_layer"
+        app:layout_constraintWidth_percent=".8">
+
+        <EditText
+            android:id="@+id/postal_code"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="10dp"
+        app:errorEnabled="true"
+        android:hint="Phone Number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/postal_code_layer"
+        app:layout_constraintWidth_percent=".8"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="@color/black">
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/add_address"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent=".6"
+        android:layout_height="70dp"
+        android:backgroundTint="#9AA7EF"
+        app:layout_constraintVertical_bias=".8"
+        android:text="Add Address"
+        android:elevation="5dp"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

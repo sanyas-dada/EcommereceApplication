@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CartActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/my_cart_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="My cart"
+        android:background="#8ff7fd"
+        android:minHeight="?attr/actionBarSize"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="?attr/actionBarTheme"/>
+
+    <TextView
+        android:id="@+id/total_price_all_product"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="#8ff7fd"
+        android:fontFamily="@font/amethysta"
+        android:gravity="center"
+        android:padding="18dp"
+        android:text="Total Price:$"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_cart_toolbar"
+        app:layout_constraintWidth_percent=".9" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cart_rec"
+        android:layout_width="0dp"
+        app:layout_constraintWidth_percent=".9"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/total_price_all_product"
+        tools:listitem="@layout/my_cart_item">
+
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:id="@+id/buy_now_ready"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:text="Buy now"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/ic_buy_cart"
+        android:backgroundTint="#00B0FF"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent=".9"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

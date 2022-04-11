@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "254044665673",
+    "project_id": "ecommerceapplication-7e052",
+    "storage_bucket": "ecommerceapplication-7e052.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:254044665673:android:f824b62d9fc9dcccb90c98",
+        "android_client_info": {
+          "package_name": "com.sanyasdada.ecommerceapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "254044665673-a476b3n00knm28a53a19kf5n12pgot8j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA8XlANIg2f7k8Cv68SMPgH0FM8Kn7yRH0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "254044665673-a476b3n00knm28a53a19kf5n12pgot8j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
